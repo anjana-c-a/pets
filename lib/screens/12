@@ -1,0 +1,5 @@
+class MoreDetailsUser extends StatelessWidget {
+  final Map<String, dynamic> hostel;
+  final String? email;
+
+  MoreDetailsUser({required this.hostel, required this.email});
