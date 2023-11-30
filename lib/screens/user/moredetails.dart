@@ -18,7 +18,7 @@ class MoreDetailsUser extends StatelessWidget {
       appBar: AppBar(
         title: Text('Hostel Details'),
       ),
-      backgroundColor: Color(0xFFF3E0C5),
+      // backgroundColor: Color(0xFFF3E0C5),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(

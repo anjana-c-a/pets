@@ -16,13 +16,10 @@ class LoginPage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color.fromARGB(255, 210, 180, 140), // Dark brown
-              Color.fromARGB(255, 0, 128, 128), // Light brown
-            ],
+          //color: Colors.black.withOpacity(1),
+          image: DecorationImage(
+            image: AssetImage('assets/images/loguser.jpeg'),
+            fit: BoxFit.cover, // Adjust this to your preference
           ),
         ),
         child: Center(
@@ -30,7 +27,7 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Card(
               elevation: 8.0,
-              color: Colors.white70, // Beige color for the card
+              color: Colors.white.withOpacity(0.8), // Beige color for the card
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -56,10 +53,18 @@ class LoginPage extends StatelessWidget {
                     ),
                     SizedBox(height: 16.0),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+    primary: const Color.fromRGBO(205, 127, 50, 52), // Set the background color here
+  ),
                       onPressed: () {
                         _loginUser(context);
                       },
-                      child: Text('Login'),
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -69,6 +74,7 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+
   }
 
   Future<void> _loginUser(BuildContext context) async {
